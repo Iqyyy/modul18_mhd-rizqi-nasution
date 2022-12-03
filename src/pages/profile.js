@@ -46,7 +46,7 @@ const Profile = () => {
         const verify = async()=> {
           try {
 
-            const response = await axios.post(`${process.env.BACKEND_URL}/verify`, { token : token})
+            const response = await axios.post(`https://modul17mhd-rizqi-nasution-production.up.railway.app/verify`, { token : token})
    
             if (response.status === 200){
               setIsLogin(true)
@@ -89,7 +89,7 @@ const Profile = () => {
 
         // 2. Hit endpoint logout dengan body jwt yang didapat dari localstorage
         //   dan setelah berhasil, beri alert sukses
-        await axios.post(`${process.env.BACKEND_URL}/logout`, {
+        await axios.post(`https://modul17mhd-rizqi-nasution-production.up.railway.app/logout`, {
             token: localStorage.getItem('token')
         })
         .then((res) => {
