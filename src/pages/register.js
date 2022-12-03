@@ -31,7 +31,7 @@ const Register = () => {
     // jika berhasil, redirect ke halaman login
     // jika gagal, tampilkan alert 'Register Gagal'
 
-    await axios.post(`https://modul17mhd-rizqi-nasution-production.up.railway.app/register`, {
+    await axios.post(`${process.env.BACKEND_URL}/register`, {
       username: data.get('username'),
       email : data.get('email'),
       password: data.get('password'),

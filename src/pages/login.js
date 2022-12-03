@@ -36,7 +36,7 @@ const Login = () => {
       
       
 
-      await axios.post(`https://modul17mhd-rizqi-nasution-production.up.railway.app/login
+      await axios.post(`${process.env.BACKEND_URL}/login
       `,{
         email : data.get('email'),
         password : data.get('password')
