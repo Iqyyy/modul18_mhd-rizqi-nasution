@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import axios from 'axios';
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -36,7 +36,8 @@ const Login = () => {
       
       
 
-      await axios.post(`http://localhost:9000/login`,{
+      await axios.post(`https://modul17mhd-rizqi-nasution-production.up.railway.app/login
+      `,{
         email : data.get('email'),
         password : data.get('password')
       })
